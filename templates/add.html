@@ -1,0 +1,17 @@
+
+
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <input type="text" name="name" placeholder="enter your cartoon name ">
+  <input type="text" name="desc" placeholder="enter the cartoon description">
+  <input type="text"name="year" placeholder="enter cartoor year">
+  <input type="file" name="img">
+  <input type="submit">
+
+{% endblock %}
+
+
+
+</form>

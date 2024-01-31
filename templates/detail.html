@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+          <img src="{{x.img.url}}" width="300" height="300">
+        </div>
+
+        <div class="col-md-5">
+
+            <h3>{{x.name}}</h3>
+            <h6>{{x.year}}</h6><br>
+            <h6>{{x.desc}}</h6><br>
+            <a class="btn btn-warning" href="{% url 'cartoonapp:update' x.id %}">Update</a>
+            <a class="btn btn-danger" href="{% url 'cartoonapp:delete' x.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
